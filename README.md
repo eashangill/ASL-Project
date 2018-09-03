@@ -83,8 +83,6 @@ The check_password_hash() checks that the hashed password passed in is equal to 
 
 ![](https://user-images.githubusercontent.com/22341150/39085786-e2b97274-457f-11e8-96b1-af26d77d4cf6.PNG)
 
-## Gestures identified as appropiate for this application
-![Gestures](static/assets/ASL.jpg "Gesturefile")
 ## Hardware used in creating the application
 #### Raspberry Pi 3 Model B
 A [Raspberry Pi](https://www.raspberrypi.org/) is a credit card-sized computer originally designed for education, inspired by the 1981 BBC Micro. Creator Eben Upton's goal was to create a low-cost device that would improve programming skills and hardware understanding at the pre-university level. But thanks to its small size and accessible price, it was quickly adopted by students and electronics enthusiasts for projects that require more than a basic microcontroller (such as Arduino devices). It is slower than a modern laptop or desktop computer but is still a complete Linux computer and can provide all the expected abilities that implies, at a low-power consumption level.
