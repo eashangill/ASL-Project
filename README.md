@@ -1,6 +1,6 @@
 # Gesture Based UI - Raspberry Pi and OpenCV
 #### *Gesture Based UI Development - Lecturer: Damien Costello - 4th Year (Hons) Software Development, GMIT*
-This repository contains a project for 4th Year module Gesture Based UI Development, developed by [Conor Tighe](https://github.com/ConorTighe1995) and [Ian Burke](https://github.com/ianburkeixiv). The project is a gesture based sign language Web App using [Flask](http://flask.pocoo.org/) as the server, a [Raspberry Pi 3 Model B](https://www.raspberrypi.org/) and [PiCamera module](https://www.raspberrypi.org/documentation/usage/camera/README.md), and [OpenCV](https://opencv.org/) for gesture recognition.
+This repository contains a project for 4th Year module Gesture Based UI Development, developed by Eashan Gill. The project is a gesture based sign language Web App using [Flask](http://flask.pocoo.org/) as the server, a [Raspberry Pi 3 Model B](https://www.raspberrypi.org/) and [PiCamera module](https://www.raspberrypi.org/documentation/usage/camera/README.md), and [OpenCV](https://opencv.org/) for gesture recognition.
 
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/22341150/39208148-07ab5fa8-47fa-11e8-8799-88fe0af5432d.PNG">
@@ -10,28 +10,19 @@ This repository contains a project for 4th Year module Gesture Based UI Developm
 
 **_Click [here](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/) for tutorial on installing OpenCV on the Raspberry Pi_**
 
-### Video Demo 
-https://youtu.be/zZEcTDbVVc0
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zZEcTDbVVc0/0.jpg)](https://youtu.be/zZEcTDbVVc0)
-
-
-## How to run
-1. Download the [zip](https://github.com/ConorTighe1995/Raspberry-Pi-Gesture-App/archive/master.zip)
-2. Extract/Unzip the repository
-3. Using a Raspberry Pi, Open a command terminal.
-4. To run the application, we need to run a python virtual environment. A virtual environment is a special tool used to keep the dependencies required by different projects in separate places by creating isolated, independent Python environments for each of them. To run the virtual environment, enter the following:
+To run the application, we need to run a python virtual environment. A virtual environment is a special tool used to keep the dependencies required by different projects in separate places by creating isolated, independent Python environments for each of them. To run the virtual environment, enter the following:
 ```bash
 pi@raspberrypi:~ $ source ~/.profile
 
 pi@raspberrypi:~ $ workon cv
 ```
-5. Once in the virtual environment (cv), go to the the directory where the repository is located. For example:
+Once in the virtual environment (cv), go to the the directory where the repository is located. For example:
 ```bash
 (cv) pi@raspberrypi:~ $ cd Desktop
 (cv) pi@raspberrypi:/Desktop $ cd Raspberry-Pi-Gesture-App
 ```
-6. Run the application:
+Run the application:
 ```bash
 (cv) pi@raspberrypi:/Desktop/Raspberry-Pi-Gesture-App $ python app.y
 ```
@@ -48,13 +39,6 @@ Don't hold your hand in the hitbox while change signs as this confuses the model
 
 #### Report an Issue
 ![](https://user-images.githubusercontent.com/22341150/39207168-2ee94150-47f7-11e8-9311-4a32405647c1.gif)
-
-### Some sign gestures
-![](https://user-images.githubusercontent.com/22341150/39207569-3308e366-47f8-11e8-9c9c-81453041d3f4.png)
-
-![](https://user-images.githubusercontent.com/22341150/39207570-332acb2a-47f8-11e8-9527-cab3fda36b26.png)
-
-![](https://user-images.githubusercontent.com/22341150/39207572-3348bd42-47f8-11e8-9455-20700d62d9e7.png)
 
 ## Purpose of the application
 The application will allow users to practice [Sign Language](https://en.wikipedia.org/wiki/Sign_language) by printing out a letter based on their hand gesture. When the Web Application is running, a user can press a button to turn on the Raspberry Pi Camera Module where a window opens up displaying the live video stream. A rectangle box is displayed on the screen where users place their hand in to make gestures. The program reads these gestures and returns a printed letter to the screen based on a certain hand gesture.
@@ -73,8 +57,6 @@ The [SVM](https://docs.opencv.org/2.4/doc/tutorials/ml/introduction_to_svm/intro
 ### User Authentication
 #### Session
 To implement a user login and registration service to the web app, a session is needed to allow you to store information specific to a user from one request to the next. It keeps track of the active user until the user logs out. Session allows us to restrict users from certain features such as the gesture recognition. If a person is not registered on the web app then they are restricted from the features. Sessions is implemented on top of cookies and signs the cookies cryptographically.
-
-![](https://user-images.githubusercontent.com/22341150/39085860-04aa195a-4581-11e8-904e-768da53181cc.PNG)
 
 #### Message Flashing
 Flashing messages was introduced to let users know if they are signed in or logged out. Good applications and user interfaces are all about feedback. The flashing system basically makes it possible to record a message at the end of a request and access it on the next request. By using the Jinja template engine that’s included in Flask, we were able to display a message across the page when the user signs in or logs out.
